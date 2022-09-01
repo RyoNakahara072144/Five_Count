@@ -90,126 +90,354 @@ class _Final_CountState extends State<Final_Count> {
       ),
     );
   }
-      Widget _buildWideContainers(){//横画面
-        return Center(
-           child: Column(
+Widget _buildWideContainers() {
+    //横画面
+    return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, 
+        children: [
+      Container(
+        decoration: BoxDecoration(
+          color: screenVanish?Colors.black:Color.fromARGB(121, 77, 105, 141),
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: SizedBox(
+            width: 300,
+            height: 55,
+            child: Center(
+              child: Text(DateFormat.Hms().format(time),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w200,
+                      color:screenVanish?Colors.white:Colors.black,
+                      )
+                      ),
+            ),
+          ),
+        ),
+      ),
+      const SizedBox(
+        height: 30,
+      ),
+      screenVanish?Container():
+      Container(
+        margin: EdgeInsets.fromLTRB(0, 20, 0, 50),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Wrap(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    child: TextButton(
+                        onPressed: addSecond1,
+                        child: Text('5'),
+                        style: TextButton.styleFrom(
+                          primary: Colors.black,
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(20),
+                          backgroundColor: Color.fromARGB(121, 77, 105, 141),
+                        ),
+                      ),
+                  ),
+                  Container(
+                child: TextButton(
+                    onPressed: addSecond2,
+                    child: const Text('10'),
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(20),
+                      backgroundColor: Color.fromARGB(121, 77, 105, 141),
+                    ),
+                  ),
+              ),
+              Container(
+                child: TextButton(
+                    onPressed: addSecond3,
+                    child: const Text('15'),
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(20),
+                      backgroundColor: Color.fromARGB(121, 77, 105, 141),
+                    ),
+                  ),
+              ),
+              Container(
+                  child: TextButton(
+                    onPressed: addSecond4,
+                    child: const Text('20'),
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(20),
+                      backgroundColor: Color.fromARGB(121, 77, 105, 141),
+                    ),
+                  ),
+                  ),
+                  ],
+                ),
+            ],
+            
+          ),
+        ),
+      ),
+           Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+      screenVanish?Ink():
+      Ink(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color:Color.fromARGB(121, 77, 105, 141),
+        ),
+        child: IconButton(
+                                onPressed: (){
+                                  Navigator.of(context).pop();
+                                }, icon: Text('◀︎')),
+      ) ,
+
+           
+          isCounting? TextButton(
+                  onPressed: stopTimer,
+                  style: TextButton.styleFrom(
+                    primary: Colors.white,
+                    ),
+                  child: const Text('Stop'),
+                ): 
+                TextButton(
+                  onPressed: startTimer,
+                  style: TextButton.styleFrom(
+                    primary: Colors.black,),
+                  child: const Text('Start')
+                  ),
+          SizedBox(
+            width: 50,
+          ),
+          screenVanish?TextButton(
+          onPressed: ResetCount,
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+            ),
+          child: const Text('Reset')
+          ):
+          TextButton(onPressed: ResetCount,
+          style: TextButton.styleFrom(
+            primary: Colors.black,
+            ),
+          child: const Text('Reset')
+          ), 
+          SizedBox(
+            width: 20,
+          )
+
+        ],
+      ),
+      ]
+      ));
+}
+      Widget _buildNormalContainer() {
+    //縦画面
+    return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, 
+        children: [
+      Container(
+        decoration: BoxDecoration(
+          color: screenVanish?Colors.black:Color.fromARGB(121, 77, 105, 141),
+          borderRadius: BorderRadius.circular(50),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20),
+          child: SizedBox(
+            width: 300,
+            height: 150,
+            child: Center(
+              child: Text(DateFormat.Hms().format(time),
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w200,
+                      color:screenVanish?Colors.white:Colors.black,
+                      )
+                      ),
+            ),
+          ),
+        ),
+      ),
+
+      screenVanish?Container():
+      Container(
+        margin: EdgeInsets.fromLTRB(0, 100, 0, 20),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Wrap(
+            // spacing: 10,
+            children: [
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(40.0),
-                    child: Text(DateFormat.Hms().format(time), style: TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.bold,color: screenVanish?Colors.white:Colors.black)),
-                  ),
-                  // const SizedBox(height: 56),
-                  
                   Container(
-                  padding: EdgeInsets.fromLTRB(45, 32, 20, 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        TextButton(onPressed: addSecond1, child: const Text('5h'),style: TextButton.styleFrom(primary: Colors.black)),
-                        TextButton(onPressed: addSecond2, child: const Text('10h'),style: TextButton.styleFrom(primary: Colors.black)),
-                        TextButton(onPressed: addSecond3, child: const Text('15h'),style: TextButton.styleFrom(primary: Colors.black)),
-                        TextButton(onPressed: addSecond4, child: const Text('20h'),style: TextButton.styleFrom(primary: Colors.black)),
-                        SizedBox(height: 72,),
-                      ],
-                    ),
-                ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(56,20,56,0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                             child: isCounting
-                              ? TextButton(
-                                 onPressed: stopTimer, child: const Text('Stop'),style: TextButton.styleFrom(primary: Colors.white),)
-                             : TextButton(
-                                 onPressed: startTimer, child: const Text('Start'),style: TextButton.styleFrom(primary: Colors.black)),
-                              ),
-                              
-                             screenVanish?TextButton(
-                                onPressed: ResetCount, child: const Text('Reset'),style: TextButton.styleFrom(primary: Colors.white)):IconButton(
-                             onPressed: (){
-                               Navigator.of(context).pop();
-                                }, icon: Text('◀︎'),)
-                                
-                        ],
-                      ),
-                    ), 
-                ]
-                
-           )
-        );
-      }
-
-
-
-      Widget _buildNormalContainer(){//縦画面
-        return Center(
-          child: Column(
-             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-               Padding(
-                 padding: const EdgeInsets.all(36.0),
-                 child: Text(DateFormat.Hms().format(time), 
-                 style: TextStyle(
-                  fontSize: 20, fontWeight: FontWeight.bold,color: screenVanish?Colors.white:Colors.black)
-                  ),
-               ),
-               const SizedBox(height: 56,),
-
-                
-                Container(
-                  padding: EdgeInsets.fromLTRB(55, 20, 20, 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        TextButton(onPressed: addSecond1, child: const Text('5h'),style: TextButton.styleFrom(primary: Colors.black)),
-                        TextButton(onPressed: addSecond2, child: const Text('10h'),style: TextButton.styleFrom(primary: Colors.black)),
-                        SizedBox(height: 48,),
-                      ],
-                    ),
-                ),
-
-                     Container(
-                       child: Padding(
-                         padding: EdgeInsets.fromLTRB(55, 20, 20, 20),
-                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                           children: [
-                             TextButton(onPressed: addSecond3, child: const Text('15h'),style: TextButton.styleFrom(primary: Colors.black)),
-                             TextButton(onPressed: addSecond4, child: const Text('20h'),style: TextButton.styleFrom(primary: Colors.black)),
-                               SizedBox(height: 72,),
-                           ],
-                         ),
-                       ),
-                     ),
-                   
-                    Center(
-                       child: isCounting
-                        ? TextButton(
-                           onPressed: stopTimer, child: const Text('Stop'),style: TextButton.styleFrom(primary: Colors.white),)
-                       : TextButton(
-                           onPressed: startTimer, child: const Text('Start'),style: TextButton.styleFrom(primary: Colors.black)),
+                    child: TextButton(
+                        onPressed: addSecond1,
+                        child: Text('5'),
+                        style: TextButton.styleFrom(
+                          primary: Colors.black,
+                          shape: CircleBorder(),
+                          padding: EdgeInsets.all(20),
+                          backgroundColor: Color.fromARGB(121, 77, 105, 141),
                         ),
-                        SizedBox(height: 24,),
+                      ),
+                  ),
+                                      SizedBox(
+                      width: 50,
+                    ),
 
-                     Center(
-                       child: TextButton(
-                       onPressed: ResetCount, child: const Text('Reset'),style: TextButton.styleFrom(primary: Colors.white)),
-                     ),
-                     SizedBox(height: 72,),
+                  Container(
+                child: TextButton(
+                    onPressed: addSecond2,
+                    child: const Text('10'),
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,
+                      shape: CircleBorder(),
+                      padding: EdgeInsets.all(20),
+                      backgroundColor: Color.fromARGB(121, 77, 105, 141),
+                    ),
+                  ),
+              ),
+                ]
+              ),
 
-                     IconButton(
-                     onPressed: (){
-                         Navigator.of(context).pop();
-                     }, icon: Text('◀︎'),
-                   )
+              Container(
+                height:140,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      child: TextButton(
+                          onPressed: addSecond3,
+                          child: const Text('15'),
+                          style: TextButton.styleFrom(
+                            primary: Colors.black,
+                            shape: CircleBorder(),
+                            padding: EdgeInsets.all(20),
+                            backgroundColor: Color.fromARGB(121, 77, 105, 141),
+                          ),
+                        ),
+                    ),
+                    SizedBox(
+                      width: 50,
+                    ),
+                     Container(
+                    child: TextButton(
+                      onPressed: addSecond4,
+                      child: const Text('20'),
+                      style: TextButton.styleFrom(
+                        primary: Colors.black,
+                        shape: CircleBorder(),
+                        padding: EdgeInsets.all(20),
+                        backgroundColor: Color.fromARGB(121, 77, 105, 141),
+                      ),
+                    ),
+                    ),
+                  ],
+                ),
+              ),
+             
+                ],
+          ))),
+          
+      
+      
+      Column(
+      children: [
+      screenVanish?Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: isCounting
+                    ? TextButton(
+                    onPressed: stopTimer,
+                    style: TextButton.styleFrom(
+                      primary: Colors.white,
+                      textStyle: TextStyle(fontSize: 24,fontWeight: FontWeight.w200),
+                      ),
+                    child: const Text('Stop'),
+                  )
+                : TextButton(
+                    onPressed: startTimer,
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,),
+                    child: const Text('Start')
+                    ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Center(
+            child: TextButton(
+            onPressed: ResetCount,
+            style: TextButton.styleFrom(
+              primary: screenVanish?Colors.white:Colors.black,
+              textStyle: TextStyle(fontSize: 24,fontWeight: FontWeight.w200)),
+            child: const Text('Reset')
+            ),
+          ),  
+        ],
+      ):Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+                child: isCounting
+                    ? TextButton(
+                    onPressed: stopTimer,
+                    style: TextButton.styleFrom(
+                      primary: Colors.white),
+                    child: const Text('Stop'),
+                  )
+                : TextButton(
+                    onPressed: startTimer,
+                    style: TextButton.styleFrom(
+                      primary: Colors.black,),
+                    child: const Text('Start')
+                    ),
+               ),
+               SizedBox(
+                width: 30,
+               ),
+          Center(
+            child: TextButton(
+            onPressed: ResetCount,
+            style: TextButton.styleFrom(
+              primary: screenVanish?Colors.white:Colors.black,),
+            child: const Text('Reset')
+            ),
+          ),  
+        ],
+      ),
+      SizedBox(
+        height: 30,
+      ),
+                     screenVanish?Ink(
+                      
+                     ):Ink(
+                      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color:Color.fromARGB(121, 77, 105, 141),
+        ),
+                          child: IconButton(
+                                onPressed: (){
+                                  Navigator.of(context).pop();
+                                }, icon: Text('◀︎')),
+                       
+                     )
                      
                      ]
            )
-        );
+    ]));
         }
       }
 

@@ -56,67 +56,56 @@ class _Five_CountState extends State<Five_Count> {
       time = time.add(const Duration(seconds: 5));
     });
   }
-
   addSecond2() {
     setState(() {
       time = time.add(const Duration(seconds: 10));
     });
   }
-
   addSecond3() {
     setState(() {
       time = time.add(const Duration(seconds: 15));
     });
   }
-
   addSecond4() {
     setState(() {
       time = time.add(const Duration(seconds: 20));
     });
   }
-
   addSecond5() {
     setState(() {
       time = time.add(const Duration(seconds: 25));
     });
   }
-
   addSecond6() {
     setState(() {
       time = time.add(const Duration(seconds: 30));
     });
   }
-
   addSecond7() {
     setState(() {
       time = time.add(const Duration(seconds: 35));
     });
   }
-
   addSecond8() {
     setState(() {
       time = time.add(const Duration(seconds: 40));
     });
   }
-
   addSecond9() {
     setState(() {
       time = time.add(const Duration(seconds: 45));
     });
   }
-
   addSecond10() {
     setState(() {
       time = time.add(const Duration(seconds: 50));
     });
   }
-
   addSecond11() {
     setState(() {
       time = time.add(const Duration(seconds: 55));
     });
   }
-
   addSecond12() {
     setState(() {
       time = time.add(const Duration(seconds: 60));
@@ -156,8 +145,8 @@ class _Five_CountState extends State<Five_Count> {
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: SizedBox(
-            width: 200,
-            height: 50,
+            width: 300,
+            height: 55,
             child: Center(
               child: Text(DateFormat.Hms().format(time),
                   style: TextStyle(
@@ -191,7 +180,7 @@ class _Five_CountState extends State<Five_Count> {
                           primary: Colors.black,
                           shape: CircleBorder(),
                           padding: EdgeInsets.all(20),
-                          backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                          backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                         ),
                       ),
                   ),
@@ -203,7 +192,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
               ),
@@ -215,7 +204,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
               ),
@@ -227,7 +216,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
                   ),
@@ -239,7 +228,7 @@ class _Five_CountState extends State<Five_Count> {
                             primary: Colors.black,
                             shape: CircleBorder(),
                             padding: EdgeInsets.all(20),
-                            backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                            backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                           ),
                         ),
                     ),
@@ -251,7 +240,7 @@ class _Five_CountState extends State<Five_Count> {
                         primary: Colors.black,
                         shape: CircleBorder(),
                         padding: EdgeInsets.all(20),
-                        backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                        backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                       ),
                     ),
                   ),
@@ -271,7 +260,7 @@ class _Five_CountState extends State<Five_Count> {
                         primary: Colors.black,
                         shape: CircleBorder(),
                         padding: EdgeInsets.all(20),
-                        backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                        backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                       ),
                     ),
                 ),
@@ -283,7 +272,7 @@ class _Five_CountState extends State<Five_Count> {
                         primary: Colors.black,
                         shape: CircleBorder(),
                         padding: EdgeInsets.all(20),
-                        backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                        backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                       ),
                     ),
                 ),
@@ -295,7 +284,7 @@ class _Five_CountState extends State<Five_Count> {
                   primary: Colors.black,
                   shape: CircleBorder(),
                   padding: EdgeInsets.all(20),
-                  backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                  backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                 ),
               ),
               ),
@@ -307,7 +296,7 @@ class _Five_CountState extends State<Five_Count> {
               primary: Colors.black,
               shape: CircleBorder(),
               padding: EdgeInsets.all(20),
-              backgroundColor: Color.fromARGB(255, 161, 229, 216),
+              backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                 ),
               ),
               ),
@@ -319,7 +308,7 @@ class _Five_CountState extends State<Five_Count> {
               primary: Colors.black,
               shape: CircleBorder(),
               padding: EdgeInsets.all(20),
-              backgroundColor: Color.fromARGB(255, 161, 229, 216),
+              backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                 ),
               ),
               ),
@@ -331,7 +320,7 @@ class _Five_CountState extends State<Five_Count> {
               primary: Colors.black,
               shape: CircleBorder(),
               padding: EdgeInsets.all(20),
-              backgroundColor: Color.fromARGB(255, 161, 229, 216),
+              backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                 ),
               ),
               ),
@@ -348,49 +337,47 @@ class _Five_CountState extends State<Five_Count> {
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: isCounting? TextButton(
-                    onPressed: stopTimer,
-                    style: TextButton.styleFrom(
-                      primary: Colors.white,
-                      textStyle: const TextStyle(fontSize: 24,fontWeight: FontWeight.w200),
-                      ),
-                    child: const Text('Stop'),
-                  ): 
-                  TextButton(
-                    onPressed: startTimer,
-                    style: TextButton.styleFrom(
-                      primary: Colors.black,),
-                    child: const Text('Start')
+           SizedBox(
+                          width: 20,
+                        ),
+          isCounting? TextButton(
+                  onPressed: stopTimer,
+                  style: TextButton.styleFrom(
+                    primary: Colors.white,
                     ),
-          ),
+                  child: const Text('Stop'),
+                ): 
+                TextButton(
+                  onPressed: startTimer,
+                  style: TextButton.styleFrom(
+                    primary: Colors.black,),
+                  child: const Text('Start')
+                  ),
           SizedBox(
             width: 50,
           ),
-          Center(
-            child: screenVanish?TextButton(
-            onPressed: ResetCount,
-            style: TextButton.styleFrom(
-              primary: Colors.white,
-              textStyle: TextStyle(fontSize: 24,fontWeight: FontWeight.w200)
-              ),
-            child: const Text('Reset')
-            ):
-            TextButton(onPressed: ResetCount,
-            style: TextButton.styleFrom(
-              primary: Colors.black,
-              ),
-            child: const Text('Reset')
-            )
+          screenVanish?TextButton(
+          onPressed: ResetCount,
+          style: TextButton.styleFrom(
+            primary: Colors.white,
+            ),
+          child: const Text('Reset')
+          ):
+          TextButton(onPressed: ResetCount,
+          style: TextButton.styleFrom(
+            primary: Colors.black,
+            ),
+          child: const Text('Reset')
           ), 
           SizedBox(
-            width: 200,
-          ),
+                          width: 20,
+                        ),
+
            screenVanish?Ink():
       Ink(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color:Color.fromARGB(255, 161, 229, 216),
+          color:Color.fromARGB(255, 161, 229, 216,),
         ),
         child: IconButton(
           onPressed: () {
@@ -465,7 +452,7 @@ class _Five_CountState extends State<Five_Count> {
                           primary: Colors.black,
                           shape: CircleBorder(),
                           padding: EdgeInsets.all(20),
-                          backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                          backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                         ),
                       ),
                   ),
@@ -477,7 +464,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
               ),
@@ -489,7 +476,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
               ),
@@ -501,7 +488,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
                   ),
@@ -522,7 +509,7 @@ class _Five_CountState extends State<Five_Count> {
                             primary: Colors.black,
                             shape: CircleBorder(),
                             padding: EdgeInsets.all(20),
-                            backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                            backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                           ),
                         ),
                     ),
@@ -534,7 +521,7 @@ class _Five_CountState extends State<Five_Count> {
                         primary: Colors.black,
                         shape: CircleBorder(),
                         padding: EdgeInsets.all(20),
-                        backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                        backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                       ),
                     ),
                   ),
@@ -546,7 +533,7 @@ class _Five_CountState extends State<Five_Count> {
                         primary: Colors.black,
                         shape: CircleBorder(),
                         padding: EdgeInsets.all(20),
-                        backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                        backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                       ),
                     ),
                 ),
@@ -558,7 +545,7 @@ class _Five_CountState extends State<Five_Count> {
                         primary: Colors.black,
                         shape: CircleBorder(),
                         padding: EdgeInsets.all(20),
-                        backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                        backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                       ),
                     ),
                 ),
@@ -577,7 +564,7 @@ class _Five_CountState extends State<Five_Count> {
                           primary: Colors.black,
                           shape: CircleBorder(),
                           padding: EdgeInsets.all(20),
-                          backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                          backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                         ),
                       ),
                   ),
@@ -589,7 +576,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
               ),
@@ -601,7 +588,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
               ),
@@ -613,7 +600,7 @@ class _Five_CountState extends State<Five_Count> {
                       primary: Colors.black,
                       shape: CircleBorder(),
                       padding: EdgeInsets.all(20),
-                      backgroundColor: Color.fromARGB(255, 161, 229, 216),
+                      backgroundColor: Color.fromARGB(255, 161, 229, 216,),
                     ),
                   ),
               ),
@@ -631,6 +618,7 @@ class _Five_CountState extends State<Five_Count> {
       screenVanish?Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          
           Center(
             child: isCounting
                     ? TextButton(
@@ -664,6 +652,7 @@ class _Five_CountState extends State<Five_Count> {
       ):Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+        
           Center(
                 child: isCounting
                     ? TextButton(
@@ -702,7 +691,7 @@ class _Five_CountState extends State<Five_Count> {
       Ink(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color:Color.fromARGB(255, 161, 229, 216),
+          color:Color.fromARGB(255, 161, 229, 216,),
         ),
         child: IconButton(
           onPressed: () {
